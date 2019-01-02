@@ -15,7 +15,6 @@
     <root id="root">
       <element id="archive" name="simpleNotepad.jar">
         <element id="module-output" name="simpleNotepad" />
-        <element id="library" level="application" name="lib" />
       </element>
     </root>
   </artifact>

@@ -8,6 +8,7 @@
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.SeparatorMenuItem?>
 <?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
@@ -36,7 +37,7 @@
                         <MenuItem mnemonicParsing="false" onAction="#handle_action_sort_dsc" text="Descending (Z-&gt;A)" />
                     </items>
                   </Menu>
-                  <MenuItem mnemonicParsing="false" text="Find" />
+                  <MenuItem mnemonicParsing="false" onAction="#handle_action_find" text="Find" />
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
@@ -53,20 +54,33 @@
                   <GridPane gridLinesVisible="true" BorderPane.alignment="CENTER">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="315.0" minWidth="10.0" prefWidth="64.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="100.0" />
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="480.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="276.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="575.0" minWidth="10.0" prefWidth="301.0" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Label text="status" />
+                        <Label fx:id="statusbar_status" text="READY" />
                         <Label text="File Size:" GridPane.columnIndex="2" />
                         <Label fx:id="statusbar_size" text="0bytes" GridPane.columnIndex="2">
                            <GridPane.margin>
                               <Insets left="50.0" />
                            </GridPane.margin>
                         </Label>
+                        <GridPane GridPane.columnIndex="1">
+                          <columnConstraints>
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="199.0" />
+                            <ColumnConstraints hgrow="SOMETIMES" maxWidth="112.0" minWidth="10.0" prefWidth="38.0" />
+                          </columnConstraints>
+                          <rowConstraints>
+                            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                          </rowConstraints>
+                           <children>
+                              <TextField fx:id="simple_find_textfield" promptText="Search something..." />
+                              <Button mnemonicParsing="false" onAction="#handle_find_button" text="FIND" GridPane.columnIndex="1" />
+                           </children>
+                        </GridPane>
                      </children>
                   </GridPane>
                </bottom>
