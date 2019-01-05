@@ -1,4 +1,5 @@
 # simpleNotepad
+https://travis-ci.com/rootdavinalfa/simpleNotepad.svg?branch=master
 /*
  *
  *  * Copyright 2018,Davin Alfarizky Putra Basudewa
